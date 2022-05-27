@@ -1,0 +1,19 @@
+{
+  "name": "snake---dijkstra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tombraganca/Snake---Dijkstra.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tombraganca/Snake---Dijkstra/issues"
+  },
+  "homepage": "https://github.com/tombraganca/Snake---Dijkstra#readme"
+}
