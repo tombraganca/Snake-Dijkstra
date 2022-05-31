@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/tombraganca/Snake---Dijkstra/issues"
   },
-  "homepage": "https://github.com/tombraganca/Snake---Dijkstra#readme"
+  "homepage": "https://github.com/tombraganca/Snake---Dijkstra#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2"
+  },
+  "dependencies": {
+    "@babel/standalone": "^7.18.4"
+  }
 }
