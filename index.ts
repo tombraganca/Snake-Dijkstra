@@ -1,5 +1,12 @@
 
 
+class Matriz {
+    drawMatriz(ctx: CanvasRenderingContext2D) {
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0, 0, 400, 400);
+    }
+}
+
 var stage: HTMLCanvasElement = document.getElementById('stage');
 var ctx: CanvasRenderingContext2D = stage.getContext('2d');
 
@@ -9,6 +16,9 @@ setInterval(game, 100);
 
 console.log('teste');
 
+const matriz = new Matriz();
+
+// const matriz: Matriz = new Matriz();
 
 const VEL = 1;
 var vx = 0;
@@ -46,8 +56,12 @@ function game() {
         py = 0;
     }
 
-    ctx.fillStyle = "black";
-    ctx.fillRect(0, 0, 400, 400);
+    // matriz.drawMatriz(ctx);
+
+    matriz.drawMatriz(ctx);
+
+    ctx.font = "12px Arial gray";
+    ctx.fillText("Hello World", 10, 10);
 
     ctx.fillStyle = 'red';
     ctx.fillRect(foodx * tp, foody * tp, tp, tp);
