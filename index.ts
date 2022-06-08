@@ -1,10 +1,20 @@
-
-
 class Matriz {
-    drawMatriz(ctx: CanvasRenderingContext2D) {
-        ctx.fillStyle = 'black';
+    desenharMatriz(ctx: CanvasRenderingContext2D, TAM_X: number, TAM_Y: number) {
+        ctx.fillStyle = 'yellow';
         ctx.fillRect(0, 0, 400, 400);
     }
+
+    escreverNaMatriz(ctx: CanvasRenderingContext2D, escrita: Array<Array<any>>, TAM_PC: number) {
+        for (let i = 0; i < TAM_PC; i++) {
+            for (let j = 0; j < TAM_PC; j++) {
+                ctx.font = "9px Comic Sans MS";
+                ctx.fillStyle = "red";
+                ctx.textAlign = "center";
+                ctx.fillText(`${escrita[i][j]}`, i * TAM_PC + 10, j * TAM_PC + 10);
+            }
+        }
+    }
+
 }
 
 var stage: HTMLCanvasElement = document.getElementById('stage');
@@ -58,10 +68,13 @@ function game() {
 
     // matriz.drawMatriz(ctx);
 
-    matriz.drawMatriz(ctx);
+    matriz.desenharMatriz(ctx, qp, qp);
 
-    ctx.font = "12px Arial gray";
-    ctx.fillText("Hello World", 10, 10);
+    const escrita = new Array(qp).fill(new Array(qp).fill('0'));
+    matriz.escreverNaMatriz(ctx, escrita, tp);
+
+
+
 
     ctx.fillStyle = 'red';
     ctx.fillRect(foodx * tp, foody * tp, tp, tp);
