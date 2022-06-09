@@ -20,6 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
+    "@types/node": "^17.0.41",
     "ts-liveserver": "0.0.0"
   },
   "dependencies": {
